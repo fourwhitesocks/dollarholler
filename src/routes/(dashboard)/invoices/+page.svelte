@@ -1,28 +1,63 @@
-invoices Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit obcaecati porro
-veritatis repudiandae iste nesciunt accusamus doloremque nam esse omnis eius cumque facere ipsa
-similique corrupti, minima tenetur magnam ab voluptatum commodi delectus ipsum deleniti recusandae
-officiis! Animi totam itaque magnam! Nemo, quaerat. Nisi non optio delectus. Omnis quod vitae animi
-veritatis. Vel numquam ea, necessitatibus tempora quia repellat quo. Lorem ipsum dolor, sit amet
-consectetur adipisicing elit. Dolorum, expedita vero? Iure, consectetur dolorem tempora fuga
-repellat illum asperiores. Voluptatum, vitae obcaecati est atque tempore minus enim sapiente
-accusamus, repellendus aut illum assumenda ad necessitatibus deserunt, totam soluta. Temporibus vel
-et nihil repellat, dignissimos ipsa sit, nemo numquam harum corrupti similique perferendis quibusdam
-autem culpa dolore odio est inventore accusantium eos rerum, minus iusto repudiandae fuga? Officiis,
-ipsa tempora. Culpa eum distinctio accusantium alias minus quis, consequuntur ut in laboriosam quam
-corrupti esse velit ipsam hic incidunt quae adipisci, exercitationem voluptate ea nulla temporibus
-nam maiores expedita ratione. Unde numquam sint deleniti ut dolores voluptatem nostrum suscipit
-dignissimos error adipisci cum, ullam earum officia quos consequatur excepturi dolore totam rem
-explicabo omnis laboriosam voluptates obcaecati. Asperiores, molestiae enim quam voluptates pariatur
-voluptate vel labore distinctio porro quia quis sed esse fugit dicta nesciunt amet reiciendis
-facilis perspiciatis at officia quisquam alias voluptas nam obcaecati. Quisquam culpa illo ea ipsa
-rem minus repellat odit dolorem porro quod, repudiandae veniam. Nulla, impedit saepe non esse
-pariatur earum qui suscipit neque. Officia consectetur optio est odit, minus minima corrupti, quam
-dolore, excepturi quidem impedit? Itaque perferendis fugit, culpa eius in dolor accusantium est
-maiores possimus. Aperiam error id ea exercitationem nam est vero veniam corrupti mollitia a
-officiis velit inventore voluptas pariatur provident atque adipisci praesentium consequatur aliquam,
-minus tempora cupiditate. Possimus tempora odit asperiores consequatur, odio natus facere velit
-animi iusto vel eaque aut mollitia nemo quas aperiam quis excepturi laborum ex. Eveniet explicabo,
-quas a dolorum nihil enim. Eveniet ex ipsa in, fuga corporis nesciunt ad, ea voluptates odit eum
-maiores corrupti soluta voluptate exercitationem magni error? Perferendis facilis necessitatibus
-dicta eum dolor accusamus sint, quis, voluptate dolorum magni, incidunt corrupti debitis id quod!
-Ex, unde cum ullam placeat fuga aliquam!
+<script>
+  import Search from '$lib/components/Search.svelte';
+  import Tag from '$lib/components/Tag.svelte';
+  import View from '$lib/components/Icon/View.svelte';
+  import ThreeDots from '$lib/components/Icon/ThreeDots.svelte';
+  import CircledAmount from '$lib/components/CircledAmount.svelte';
+</script>
+
+<svelte:head>
+  <title>Invoices | The Dollar Holler</title>
+</svelte:head>
+
+<div class="mb-16 flex items-center justify-between">
+  <!-- search field -->
+  <Search />
+  <!-- new invoice button -->
+
+  <div>
+    <button
+      class="font-sansSerif font-sansSerif relative translate-y-0 whitespace-nowrap rounded-lg bg-lavenderIndigo px-10 py-3 text-xl font-black text-white shadow-colored transition-all hover:-translate-y-2 hover:shadow-coloredHover"
+      >+ Invoice</button
+    >
+  </div>
+</div>
+
+<!-- list of invoices -->
+
+<div>
+  <!-- header -->
+
+  <div class="table-header invoice-table text-daisyBush ">
+    <h3>Status</h3>
+    <h3>Due Date</h3>
+    <h3>ID</h3>
+    <h3>Client</h3>
+    <h3>Amount</h3>
+    <div />
+    <div />
+  </div>
+
+  <!-- invoices -->
+  <div class="invoice-table items-center rounded-lg bg-white py-6 shadow-tableRow">
+    <div><Tag label="draft" /></div>
+    <div class="text-lg">8/1/2022</div>
+    <div class="text-lg">12345</div>
+    <div class="text-xl font-bold">Compressed.fm</div>
+    <div class="font-mono text-lg font-bold">$504.00</div>
+    <div class="center text-lg">
+      <a href="#" class="text-pastelPurple hover:text-daisyBush"><View /></a>
+    </div>
+    <div class="center text-lg">
+      <button class="text-pastelPurple hover:text-daisyBush"><ThreeDots /></button>
+    </div>
+  </div>
+</div>
+
+<CircledAmount label="Total" amount="$1,144.00" />
+
+<style lang="postcss">
+  .table-header h3 {
+    @apply text-xl font-black leading-snug;
+  }
+</style>
