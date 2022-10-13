@@ -8,6 +8,8 @@ module.exports = {
       handwritting: ['Kalam', 'cursive']
 },
 
+//extends is when you make a whole new class but it does not use existing tw classes
+
 extend: {
   backgroundImage: {
     circle: "url('/images/circle.svg')",
