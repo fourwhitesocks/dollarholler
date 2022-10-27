@@ -3,6 +3,7 @@
         "fontfamily",
         "handwritting",
         "Kalam",
-        "sveltejs"
+        "sveltejs",
+        "sveltekit"
     ]
 }

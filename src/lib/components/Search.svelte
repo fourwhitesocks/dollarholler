@@ -9,8 +9,8 @@
     type="text"
     name="search"
     placeholder="Search by keyword"
-    class="font-sansSerif w-72 border-b-2 border-dashed border-b-pastelPurple bg-transparent text-xl text-black outline-none focus:border-solid focus:border-b-lavenderIndigo"
+    class="font-sansSerif w-full border-b-2 border-dashed border-b-pastelPurple bg-transparent text-base text-xl text-black outline-none focus:border-solid focus:border-b-lavenderIndigo md:w-[14rem] lg:w-72 lg:text-xl"
   />
 
-  <button class="font-sansSerif text-xl font-black text-pastelPurple">Search</button>
+  <button class="font-sansSerif text-large font-black text-pastelPurple lg:text-xl">Search</button>
 </div>

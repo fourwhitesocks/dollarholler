@@ -6,23 +6,19 @@
 
 @layer base {
     body {
-        @apply: font-sansSerif
+        @apply font-sansSerif
     }
 
     svg {
-        @apply fill-current;
+        @apply fill-current
     }
-
 }
 
-
-
+/*something is wrong here on mobile this is where it would not let me add the lg:  */
 @layer components {
-
     .invoice-table {
-        @apply mb-3 grid grid-cols-invoiceTable gap-4 px-6 w-full
+        @apply grid grid-cols-invoiceTableMobile grid-cols-invoiceTable gap-x-4 px-4 mb-3 w-full
     }
-
 }
 
 @layer utilities {
@@ -30,4 +26,7 @@
         @apply flex items-center justify-center
     }
 
+    .hidden {
+        display: none;
+    }
 }

@@ -2,11 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    fontfamily: {
-      sansSerif: ['Source Sans Pro', 'sans - serif' ],
-      mono: ['Source Code Pro', 'monospace'],
-      handwritting: ['Kalam', 'cursive']
-},
+    fontFamily: {
+      sansSerif: ['Source Sans Pro'],
+      mono: ['Source Code Pro'],
+      handwriting: ['Kalam', 'cursive']
+    },
 
 //extends is when you make a whole new class but it does not use existing tw classes
 
@@ -44,7 +44,8 @@ extend: {
   },
 
   gridTemplateColumns: {
-'invoiceTable': '100px 100px 60px 1fr 116px 32px 32px',
+    'invoiceTable': '100px 100px 60px 1fr 116px 32px 32px',
+    'invoiceTableMobile': "1fr 90px"
   },
 
   zIndex: {
