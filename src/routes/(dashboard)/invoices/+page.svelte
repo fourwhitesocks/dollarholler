@@ -5,6 +5,7 @@
 
   import CircledAmount from '$lib/components/CircledAmount.svelte';
   import InvoiceRow from './InvoiceRow.svelte';
+  import { centsToDollars, sumInvoices } from '$lib/utils/moneyHelpers';
 
   onMount(() => {
     loadInvoices();
@@ -51,8 +52,9 @@
     <InvoiceRow {invoice} />
   {/each}
 </div>
-
-<CircledAmount label="Total" amount="$1,144.00" />
+<!-- first dollar sign is a string that gets passed to browser and 2nd one is saying this is js go ahead and execute that -->
+<!-- circled amt sums up all the invoices and then formats it w/ cents to dollars -->
+<CircledAmount label="Total" amount={`$${centsToDollars(sumInvoices($invoices))}`} />
 
 <style lang="postcss">
   .table-header h3 {
